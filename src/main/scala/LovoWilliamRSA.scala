@@ -181,10 +181,10 @@ object LovoWilliamRSA {
     printf(s"d = 0x${keys(2).toHexString}.\n\n")
 
     val encrypted_message: Int = sample.encrypt(message = m, inE = keys(0), inN = keys(1))
-    printf(s"The encryption of <m=4> is 0x$encrypted_message.\n")
+    printf(s"The encryption of <m=4> is 0x${encrypted_message.toHexString}.\n")
 
     val decrypted_message: Int = sample.decrypt(encrypted_message, keys(2), keys(1))
-    printf(s"The decryption of <c=255> is 0x$decrypted_message.\n")
+    printf(s"The decryption of <c=255> is 0x${decrypted_message.toHexString}.\n")
   }
 }
 
